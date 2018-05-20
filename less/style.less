@@ -11,6 +11,7 @@ body {
 /* Обертка */
 .wrapper {
 	max-width: 100%;
+	min-width: 320px;
 	margin: 0 auto;
 	box-sizing: border-box;
 }
@@ -240,6 +241,55 @@ table, td, th {
 		justify-content: space-between;
 	}
 }
+.new, .hot {
+	position: relative;
+}
+.new:before {
+	content: "";
+	width:0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #e24602;
+	border-right-color: #e24602;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2;
+}
+.new:after {
+	content: "new";
+	font-family: 'Roboto', sans-serif;
+	font-size: 9px;
+	position: absolute;
+	text-transform: uppercase;
+    top: 6px;
+    right: 3px;
+	z-index: 3;
+	color: white;
+}
+.hot:before {
+	content: "";
+	width:0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #faef03;
+	border-right-color: #faef03;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2;
+}
+.hot:after {
+	content: "hot";
+	font-family: 'Roboto', sans-serif;
+	font-size: 9px;
+	position: absolute;
+	text-transform: uppercase;
+    top: 6px;
+    right: 3px;
+	z-index: 3;
+	color: #000;
+}
 .product-box {
 	width: 270px;
 	background-color: #fff;
@@ -262,12 +312,17 @@ table, td, th {
 		margin: 0 auto;
 		opacity: .7;
 	}
+	&__link {
+		text-decoration: none;
+		color: #333;
+	}
 }
 .pnp {
     display: flex;
     width: 92%;
     justify-content: space-between;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding: 20px 0;
     font-style: italic;
     font-weight: 600;
     &__product-name {
@@ -987,6 +1042,10 @@ table, td, th {
 	.brand, 
 	.insta__img-block {
 		justify-content: space-around;
+	}
+	.insta__picture {
+		width: 130px;
+		height: 130px;
 	}
 	.footer-about {
 		flex-wrap: wrap;
