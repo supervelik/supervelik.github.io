@@ -1018,6 +1018,9 @@ th {
   .brand__our-brands {
     width: 130px;
   }
+  .contact-brand {
+    margin-bottom: 0;
+  }
   .footer-top__content {
     padding-top: 25px;
     padding-bottom: 15px;
